@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 20px 0;
+}
+
+.header .main-nav a {
+    color: #f1faee;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header .main-nav a:hover {
+    color: #a8dadc;
+}
+
+/* Seção de Contato */
+.contato {
+    padding: 60px 0;
+    background-color: #e5f1f4;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1d3557;
+}
+
+.contato p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Contato Info */
+.contato-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.formulario {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1d3557;
+}
+
+.formulario label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario button {
+    background-color: #457b9d;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #1d3557;
+}
+
+/* Informações */
+.informacoes {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1d3557;
+}
+
+.informacoes p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1d3557;
+}
+
+.social-icon {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Mapa */
+.mapa {
+    margin-top: 60px;
+}
+
+.mapa iframe {
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario,
+    .informacoes {
+        width: 90%;
+    }
+}

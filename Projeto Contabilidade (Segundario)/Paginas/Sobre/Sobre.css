@@ -1,0 +1,250 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 20px 0;
+}
+
+.header .main-nav a {
+    color: #f1faee;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header .main-nav a:hover {
+    color: #a8dadc;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 80px 0;
+    background-color: #f1faee;  /* Branco com toque de cinza claro */
+    text-align: center;
+    background-image: url('images/bg-about.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #1d3557;  /* Azul escuro */
+}
+
+.sobre h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sobre p {
+    font-size: 1.5rem;
+    color: #333;  /* Cinza escuro */
+    margin-bottom: 40px;
+}
+
+/* Linha do Tempo */
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-left: 4px solid #457b9d;  /* Azul suave */
+    padding-left: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #457b9d;  /* Azul suave */
+    width: 120px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Missão, Visão e Valores */
+.mission-vision-values {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.mvv-item {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.mvv-item:hover {
+    transform: scale(1.05);
+}
+
+.mvv-item h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1d3557;  /* Azul escuro */
+}
+
+.mvv-item p {
+    font-size: 1.1rem;
+    color: #666;  /* Cinza escuro */
+}
+
+.mvv-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.mvv-item li {
+    font-size: 1.1rem;
+    color: #666;  /* Cinza escuro */
+}
+
+/* Equipe */
+.team {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.team-member {
+    text-align: center;
+    width: 30%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1d3557;  /* Azul escuro */
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #666;  /* Cinza escuro */
+}
+
+.team-member button {
+    background-color: #457b9d;  /* Azul suave */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.team-member button:hover {
+    background-color: #1d3557;  /* Azul escuro */
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #1d3557;  /* Azul escuro */
+    color: #f1faee;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .team-member {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .mvv-item {
+        width: 100%;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-date {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Consultoria de TI</title>
+    <link rel="stylesheet" href="Sobre.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Consultoria Contábil</h1>
+            <nav class="main-nav">
+                <a href="../Serviços/Serviços.html">Serviços</a>
+                <a href="../Planos/Plano.html">Planos</a>
+                <a href="../../index.html">Home</a>
+                <a href="../FAQ/faq.html">FAQ</a>
+                <a href="../Contato/contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Sobre a Empresa -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre a LogoConsultoria</h2>
+            <p>Transformando empresas com soluções inovadoras em tecnologia. A LogoConsultoria é líder em consultoria de TI, ajudando empresas a alcançar seus objetivos com estratégias tecnológicas.</p>
+
+            <!-- Linha do Tempo -->
+            <div class="timeline">
+                <h3>Nossa História</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h4>Início das Operações</h4>
+                        <p>LogoConsultoria começa a oferecer serviços de consultoria para pequenas empresas, trazendo inovação e eficiência para os negócios.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h4>Expansão para Soluções Avançadas</h4>
+                        <p>A empresa amplia seu portfólio, oferecendo soluções em segurança cibernética, cloud computing e transformação digital.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h4>Consultoria Global</h4>
+                        <p>Expandimos nossa atuação para mercados internacionais, atendendo empresas globais com soluções personalizadas e de ponta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missão, Visão e Valores -->
+            <div class="mission-vision-values">
+                <h3>Missão, Visão e Valores</h3>
+                <div class="mvv-item">
+                    <h4>Missão</h4>
+                    <p>Prover soluções inovadoras e seguras para nossos clientes, ajudando-os a atingir novos patamares de sucesso.</p>
+                </div>
+                <div class="mvv-item">
+                    <h4>Visão</h4>
+                    <p>Ser a principal consultoria de TI, reconhecida pela excelência em soluções personalizadas, comprometida com a transformação digital.</p>
+                </div>
+                <div class="mvv-item">
+                    <h4>Valores</h4>
+                    <ul>
+                        <li>Inovação</li>
+                        <li>Compromisso</li>
+                        <li>Excelência</li>
+                        <li>Transparência</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Equipe -->
+            <div class="team">
+                <h3>Conheça Nossa Equipe</h3>
+                <div class="team-member">
+                    <img src="../../Imagens/pe2.jpg" alt="Membro da equipe">
+                    <h4>João Silva</h4>
+                    <p>CEO e Fundador</p>
+                    <button onclick="showModal('modal1')">Ver mais</button>
+                </div>
+                <div class="team-member">
+                    <img src="../../Imagens/pe1.jpg" alt="Membro da equipe">
+                    <h4>Maria Souza</h4>
+                    <p>Diretora de Tecnologia</p>
+                    <button onclick="showModal('modal2')">Ver mais</button>
+                </div>
+                <div class="team-member">
+                    <img src="../../Imagens/pe5.jpg" alt="Membro da equipe">
+                    <h4>Carlos Oliveira</h4>
+                    <p>Gerente de Projetos</p>
+                    <button onclick="showModal('modal3')">Ver mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais de Equipe -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>João Silva</h3>
+            <p>João é o CEO e fundador da LogoConsultoria. Com mais de 15 anos de experiência em TI, ele é responsável por liderar a empresa para novos horizontes e sempre buscar inovação.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Maria Souza</h3>
+            <p>Maria é a Diretora de Tecnologia, especializada em transformação digital e segurança cibernética. Ela lidera a equipe de desenvolvimento para garantir soluções inovadoras e seguras para nossos clientes.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Carlos Oliveira</h3>
+            <p>Carlos é Gerente de Projetos e tem vasta experiência em gerenciamento de equipes técnicas e implementação de soluções de TI. Ele garante que todos os projetos sejam entregues no prazo e dentro do orçamento.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LogoConsultoria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="sobre.js"></script>
+</body>
+
+</html>

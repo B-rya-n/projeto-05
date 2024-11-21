@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos - Consultoria de TI</title>
+    <link rel="stylesheet" href="plano.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Consultoria Contábil</h1>
+            <nav class="main-nav">
+                <a href="../Serviços/Serviços.html">Serviços</a>
+                <a href="../../index.html">Home</a>
+                <a href="../Sobre/Sobre.html">Sobre</a>
+                <a href="../FAQ/faq.html">FAQ</a>
+                <a href="../Contato/contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Planos -->
+    <section id="planos" class="planos">
+        <div class="container">
+            <h2>Escolha o Plano Perfeito para Sua Empresa</h2>
+            <p>Com nossos planos, você pode escalar suas operações de TI de forma simples e eficiente. Encontre o que melhor se adapta ao seu negócio.</p>
+
+            <!-- Planos Interativos -->
+            <div class="planos-container">
+                <!-- Plano Básico -->
+                <div class="plano-item plano-básico">
+                    <h3>Plano Básico</h3>
+                    <p>Para pequenas empresas que precisam de uma base sólida de TI sem comprometer o orçamento.</p>
+                    <div class="preco">
+                        <span class="valor">R$ 1.000,00</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+
+                    <div class="features">
+                        <ul>
+                            <li><i class="icon">✔️</i> Suporte 24/7</li>
+                            <li><i class="icon">✔️</i> Consultoria básica em TI</li>
+                            <li><i class="icon">✔️</i> Ferramentas essenciais de segurança</li>
+                            <li><i class="icon">✔️</i> Monitoramento de sistemas</li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="btn-cta">Contratar Agora</a>
+                    <button class="btn-more-info" onclick="showModal('modal-básico')">Mais informações</button>
+                </div>
+
+                <!-- Plano Avançado -->
+                <div class="plano-item plano-avançado">
+                    <h3>Plano Avançado</h3>
+                    <p>Para empresas de médio porte que buscam mais robustez e segurança em suas operações.</p>
+                    <div class="preco">
+                        <span class="valor">R$ 3.000,00</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+
+                    <div class="features">
+                        <ul>
+                            <li><i class="icon">✔️</i> Suporte 24/7</li>
+                            <li><i class="icon">✔️</i> Consultoria personalizada</li>
+                            <li><i class="icon">✔️</i> Ferramentas avançadas de segurança</li>
+                            <li><i class="icon">✔️</i> Desenvolvimento de sistemas sob medida</li>
+                            <li><i class="icon">✔️</i> Monitoramento completo de sistemas</li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="btn-cta">Contratar Agora</a>
+                    <button class="btn-more-info" onclick="showModal('modal-avançado')">Mais informações</button>
+                </div>
+
+                <!-- Plano Premium -->
+                <div class="plano-item plano-premium">
+                    <h3>Plano Premium</h3>
+                    <p>Para grandes empresas que buscam soluções completas e gestão ágil de todos os seus projetos de TI.</p>
+                    <div class="preco">
+                        <span class="valor">R$ 6.000,00</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+
+                    <div class="features">
+                        <ul>
+                            <li><i class="icon">✔️</i> Suporte 24/7</li>
+                            <li><i class="icon">✔️</i> Consultoria estratégica de TI</li>
+                            <li><i class="icon">✔️</i> Desenvolvimento de software personalizado</li>
+                            <li><i class="icon">✔️</i> Gestão de projetos com metodologias ágeis</li>
+                            <li><i class="icon">✔️</i> Implementação de soluções de automação</li>
+                            <li><i class="icon">✔️</i> Suporte dedicado e consultoria constante</li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="btn-cta">Contratar Agora</a>
+                    <button class="btn-more-info" onclick="showModal('modal-premium')">Mais informações</button>
+                </div>
+            </div>
+
+            <!-- Seção de Comparação -->
+            <section id="comparar" class="comparar">
+                <h2>Compare os Planos</h2>
+                <table>
+                    <tr>
+                        <th>Recurso</th>
+                        <th>Plano Básico</th>
+                        <th>Plano Avançado</th>
+                        <th>Plano Premium</th>
+                    </tr>
+                    <tr>
+                        <td>Suporte 24/7</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Consultoria Personalizada</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Desenvolvimento Sob Medida</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoramento Completo</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Seção de Testemunhos -->
+            <section id="testemunhos" class="testemunhos">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="testemunho">
+                    <p>"A consultoria foi essencial para a transformação digital da nossa empresa. O plano avançado atendeu todas as nossas necessidades!"</p>
+                    <span>- João Silva, CEO da Empresa X</span>
+                </div>
+                <div class="testemunho">
+                    <p>"Excelente suporte e um time altamente capacitado. Com o plano Premium, conseguimos automatizar diversos processos em nosso negócio."</p>
+                    <span>- Maria Oliveira, CTO da Empresa Y</span>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Modais de Informações -->
+    <div class="modal" id="modal-básico">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-básico')">&times;</span>
+            <h3>Plano Básico - Detalhes</h3>
+            <p>O plano básico inclui as funcionalidades essenciais para empresas que estão começando ou pequenas empresas que buscam organização e segurança nas operações.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-avançado">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-avançado')">&times;</span>
+            <h3>Plano Avançado - Detalhes</h3>
+            <p>Este plano inclui funcionalidades adicionais de segurança, desenvolvimento personalizado e suporte especializado, ideal para empresas de médio porte.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-premium">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-premium')">&times;</span>
+            <h3>Plano Premium - Detalhes</h3>
+            <p>O plano premium é voltado para grandes empresas que necessitam de soluções customizadas, integração de sistemas e acompanhamento especializado contínuo.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LogoConsultoria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="plano.js"></script>
+</body>
+
+</html>

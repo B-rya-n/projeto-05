@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - Consultoria de TI</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Consultoria Contábil</h1>
+            <nav class="main-nav">
+                <a href="../Serviços/Serviços.html">Serviços</a>
+                <a href="../Planos/Plano.html">Planos</a>
+                <a href="../Sobre/Sobre.html">Sobre</a>
+                <a href="../../index.html">Home</a>
+                <a href="../Contato/contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <p>Tem alguma dúvida? Confira as respostas para as perguntas mais comuns!</p>
+
+            <!-- Acordeão de Perguntas -->
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(1)">
+                        <span class="faq-icon">❓</span>
+                        O que é a Consultoria de TI?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>A consultoria de TI envolve serviços especializados que ajudam a otimizar, proteger e gerenciar os recursos de tecnologia da informação de uma empresa. Oferecemos suporte, planejamento e implementação de soluções tecnológicas sob medida.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(2)">
+                        <span class="faq-icon">❓</span>
+                        Como funcionam os planos de consultoria?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>Nossos planos são criados para atender empresas de diferentes portes e necessidades. Oferecemos desde pacotes básicos até planos premium, com consultoria, desenvolvimento personalizado e suporte especializado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(3)">
+                        <span class="faq-icon">❓</span>
+                        Quais são os benefícios da nossa consultoria?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>Oferecemos soluções personalizadas, suporte contínuo e ferramentas avançadas de segurança. Nossa consultoria ajuda sua empresa a otimizar processos, reduzir custos e aumentar a produtividade com tecnologia de ponta.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(4)">
+                        <span class="faq-icon">❓</span>
+                        Como contratar um plano de consultoria?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        <p>Basta acessar a página de planos, escolher o plano que mais se adequa às suas necessidades e clicar no botão 'Contratar Agora'. Caso precise de ajuda, nossa equipe de vendas está disponível para esclarecer dúvidas e orientar na escolha do melhor plano.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(5)">
+                        <span class="faq-icon">❓</span>
+                        O que está incluído no suporte 24/7?
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5">
+                        <p>Nosso suporte 24/7 inclui atendimento imediato para resolver problemas técnicos, garantir o bom funcionamento das suas soluções de TI e fornecer assistência para manutenção de sistemas e servidores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão para contato -->
+            <div class="faq-cta">
+                <p>Não encontrou sua resposta? <a href="contato.html">Entre em contato conosco</a> e nossa equipe terá prazer em ajudar!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LogoConsultoria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="faq.js"></script>
+</body>
+
+</html>
