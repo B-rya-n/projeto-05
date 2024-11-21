@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Soluções - Tec New</title>
+    <style>
+        /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('../../Imagens/gif\ 3.webp'); /* Substitua pelo caminho do seu GIF */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a202c;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .simulador-container {
+            max-width: 800px;
+            margin: 100px auto; /* Aumenta o margin-top para deixar o conteúdo abaixo do menu */
+            background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para melhor contraste */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .options button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .options button:hover {
+            background-color: #1a202c;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #1a202c;
+        }
+
+        .result p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .reset-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Menu de Navegação */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Espaçamento adicional no topo para o conteúdo não ficar sobre o menu */
+        .content {
+            margin-top: 120px; /* Ajuste de acordo com a altura do seu menu */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <link rel="stylesheet" href="../../styles.css">
+    <header class="navbar">
+        <div class="logo">
+            <a href="../../index.html">Tec New</a>
+        </div>
+        <nav class="menu">
+            <a href="../../index.html">Home</a>
+            <a href="../Serviços/serviços.html">Serviços</a>
+            <a href="../Sobre/Sobre.html">Sobre</a>
+            <a href="../Recursos/Recursos.html">Recursos</a>
+        </nav>
+        <div class="contact-btn">
+            <a href="../Contatos/Contatos.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Simulador -->
+    <div class="content">
+        <div class="simulador-container">
+            <h2>Simulador de Soluções Personalizadas</h2>
+
+            <!-- Perguntas -->
+            <div class="question" id="question-1">
+                <h3>Qual o principal desafio da sua empresa?</h3>
+                <div class="options">
+                    <button data-answer="infra">Infraestrutura de TI</button>
+                    <button data-answer="seguranca">Segurança Digital</button>
+                    <button data-answer="otimizacao">Otimização de Processos</button>
+                </div>
+            </div>
+
+            <div class="question" id="question-2" style="display: none;">
+                <h3>Qual o porte da sua empresa?</h3>
+                <div class="options">
+                    <button data-answer="pequeno">Pequeno</button>
+                    <button data-answer="medio">Médio</button>
+                    <button data-answer="grande">Grande</button>
+                </div>
+            </div>
+
+            <div class="question" id="question-3" style="display: none;">
+                <h3>Quantos colaboradores trabalham na área de TI?</h3>
+                <div class="options">
+                    <button data-answer="1-5">1 a 5</button>
+                    <button data-answer="6-20">6 a 20</button>
+                    <button data-answer="20+">Mais de 20</button>
+                </div>
+            </div>
+
+            <div class="question" id="question-4" style="display: none;">
+                <h3>Qual é o seu orçamento anual estimado para soluções de TI?</h3>
+                <div class="options">
+                    <button data-answer="baixo">Baixo (até 50 mil)</button>
+                    <button data-answer="medio">Médio (50 a 200 mil)</button>
+                    <button data-answer="alto">Alto (acima de 200 mil)</button>
+                </div>
+            </div>
+
+            <div class="question" id="question-5" style="display: none;">
+                <h3>Qual é a sua prioridade no momento?</h3>
+                <div class="options">
+                    <button data-answer="manutencao">Manutenção de Sistemas</button>
+                    <button data-answer="expansao">Expansão</button>
+                    <button data-answer="inovacao">Adoção de Novas Tecnologias</button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="result" id="result">
+                <h3>Solução Recomendada</h3>
+                <p id="recommendation"></p>
+                <button class="reset-btn" onclick="resetSimulator()">Refazer Simulação</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const resultDiv = document.getElementById('result');
+        const recommendationText = document.getElementById('recommendation');
+
+        const answers = [];
+
+        document.querySelectorAll('.options button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const answer = e.target.dataset.answer;
+                answers.push(answer);
+
+                // Avança para a próxima pergunta
+                const currentQuestion = e.target.closest('.question');
+                const nextQuestion = currentQuestion.nextElementSibling;
+
+                if (nextQuestion && nextQuestion.classList.contains('question')) {
+                    currentQuestion.style.display = 'none';
+                    nextQuestion.style.display = 'block';
+                } else {
+                    showResult();
+                }
+            });
+        });
+
+        function showResult() {
+            const [desafio, porte, colaboradores, orcamento, prioridade] = answers;
+
+            // Gera uma recomendação detalhada
+            let recommendation = `Com base nas suas respostas, sugerimos uma solução focada em ${desafio}. `;
+
+            if (orcamento === 'baixo') {
+                recommendation += 'Consideramos importante priorizar serviços mais econômicos como suporte remoto e ferramentas open-source.';
+            } else if (orcamento === 'medio') {
+                recommendation += 'Recomendamos soluções equilibradas que ofereçam bom custo-benefício, como plataformas de automação personalizadas.';
+            } else if (orcamento === 'alto') {
+                recommendation += 'Sugerimos implementar tecnologias de ponta, como inteligência artificial e segurança baseada em IA.';
+            }
+
+            recommendation += ` Para uma empresa de porte ${porte} com ${colaboradores} colaboradores na área de TI, `;
+            recommendation += prioridade === 'inovacao' 
+                ? 'nossas soluções inovadoras podem transformar seus processos e oferecer vantagem competitiva.' 
+                : 'nossa equipe especializada está pronta para ajudar com manutenção e expansão conforme necessário.';
+
+            recommendationText.textContent = recommendation;
+            questions.forEach(q => q.style.display = 'none');
+            resultDiv.style.display = 'block';
+        }
+
+        function resetSimulator() {
+            answers.length = 0;
+            resultDiv.style.display = 'none';
+            questions[0].style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

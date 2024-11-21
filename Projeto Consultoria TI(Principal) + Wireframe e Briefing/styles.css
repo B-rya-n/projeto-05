@@ -1,0 +1,239 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Menu de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0072ff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    margin: 0 20px;
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+.contact-btn a {
+    padding: 12px 25px;
+    background-color: #0072ff;
+    color: #fff;
+    border: 2px solid #0072ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-btn a:hover {
+    background-color: #00c6ff;
+    color: #fff;
+}
+
+/* Seção de Introdução */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Imagens/background1.webp'); /* Caminho do seu GIF */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px); /* Desfoque no fundo */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.company-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4.5rem;
+    color: #00c6ff;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    color: #ddd;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cta-button {
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #00c6ff;
+    color: #fff;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-secondary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    color: #0072ff;
+    background-color: #fff;
+    border: 2px solid #0072ff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+    background-color: #00c6ff;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 3rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .cta-button, .cta-secondary {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00c6ff;
+}
+
+
+
+.signup-btn {
+    padding: 12px 25px;
+    background-color: #00c6ff;
+    color: #fff;
+    border: 2px solid #00c6ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #0072ff;
+    color: #fff;
+}

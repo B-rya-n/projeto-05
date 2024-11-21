@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Tec New</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Formulario.css">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="../../index.html">Tec New</a>
+        </div>
+        <nav class="menu">
+            <a href="../../index.html">Home</a>
+            <a href="../Serviços/serviços.html">Serviços</a>
+            <a href="../Sobre/Sobre.html">Sobre</a>
+            <a href="../Recursos/Recursos.html">Recursos</a>
+        </nav>
+        <div class="contact-btn">
+            <a href="../Contatos/Contatos.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- Seção de Cadastro -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1 class="contact-title">Cadastro na Tec New</h1>
+            <p class="contact-description">Preencha o formulário abaixo para criar sua conta.</p>
+
+            <!-- Formulário de Cadastro -->
+            <form class="contact-form" id="register-form">
+                <div class="form-group">
+                    <label for="username">Nome Completo</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">Estado</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">CEP</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Data de Nascimento</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="occupation">Ocupação</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirme a Senha</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="submit-button">Registrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript para envio de e-mail com EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Inicializar o EmailJS com sua chave de API
+        (function() {
+            emailjs.init("5SCX5sEPIIny-B-Sr"); // Substitua pela sua API Key do EmailJS
+        })();
+
+        // Função para enviar o formulário de cadastro
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevenir o envio padrão do formulário
+
+            // Enviar o e-mail usando EmailJS com os novos dados do formulário
+            emailjs.sendForm('service_h0kwzyf', 'template_d034a5k', this)
+                .then(function(response) {
+                    alert('Cadastro enviado com sucesso!');
+                    document.getElementById('register-form').reset(); // Limpar o formulário
+                }, function(error) {
+                    alert('Erro ao enviar o cadastro: ' + error.text);
+                });
+        });
+    </script>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Tec New. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

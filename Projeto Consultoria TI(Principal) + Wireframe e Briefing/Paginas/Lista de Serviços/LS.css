@@ -1,0 +1,355 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    overflow-x: hidden;
+    padding-top: 70px; /* espaço para o cabeçalho fixo */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2a7aba; /* cor do cabeçalho */
+    color: #2a7aba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+/* Estilos gerais da navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0072ff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    margin: 0 20px;
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+.contact-btn a {
+    padding: 12px 25px;
+    background-color: #0072ff;
+    color: #fff;
+    border: 2px solid #0072ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-btn a:hover {
+    background-color: #00c6ff;
+    color: #fff;
+}
+
+/* Alinhamento da logo à esquerda */
+.navbar .logo {
+    order: 1;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .logo a {
+    color:  #2a7aba;
+    text-decoration: none;
+}
+
+/* Alinhamento dos links de navegação ao centro */
+.navbar .menu {
+    order: 2;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar .menu a {
+    color:  #2a7aba;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.navbar .menu a:hover {
+    color: #a5d8ff; /* cor de destaque ao passar o mouse */
+}
+
+/* Alinhamento do carrinho à direita */
+.navbar .cart {
+    order: 3;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo, .navbar .cart {
+        margin: 10px 0;
+    }
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.cart {
+    font-size: 1.2em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px; /* espaço acima da seção de serviços */
+}
+
+.container h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2a7aba; /* cor do título */
+}
+
+.service-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* permite que os itens se ajustem */
+    gap: 20px; /* espaço entre os itens */
+    justify-content: center; /* centraliza os itens */
+}
+
+.service-item {
+    background-color: #ffffff; /* cor do fundo do serviço */
+    border-radius: 8px; /* cantos arredondados */
+    padding: 20px; /* espaço interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    width: 100%;
+    max-width: 300px; /* largura máxima */
+    text-align: center; /* centraliza o texto */
+    transition: transform 0.3s; /* efeito de transição ao passar o mouse */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* eleva o item ao passar o mouse */
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 100px; /* largura máxima da imagem */
+    height: auto; /* altura automática */
+    border-radius: 50%; /* imagem circular */
+    margin-bottom: 10px; /* espaço abaixo da imagem */
+}
+
+.service-item h3 {
+    color: #2a7aba; /* cor do título do serviço */
+    font-size: 1.2em; /* tamanho do título */
+    margin-bottom: 10px; /* espaço abaixo do título */
+}
+
+.service-item p {
+    font-size: 0.9em; /* tamanho da descrição */
+    color: #666; /* cor da descrição */
+    margin-bottom: 15px; /* espaço abaixo da descrição */
+}
+
+.buttons {
+    display: flex; /* flexbox para alinhar os botões */
+    gap: 10px; /* espaço entre os botões */
+    justify-content: center; /* centraliza os botões */
+}
+
+.button,
+.cart-button {
+    background-color: #2a7aba; /* cor dos botões */
+    color: white; /* cor do texto */
+    padding: 8px 12px; /* espaço interno dos botões */
+    border-radius: 4px; /* cantos arredondados */
+    text-decoration: none; /* remove sublinhado */
+    font-size: 0.9em; /* tamanho da fonte */
+    transition: background-color 0.3s; /* efeito de transição ao passar o mouse */
+}
+
+.button:hover,
+.cart-button:hover {
+    background-color: #1e5f91; /* cor ao passar o mouse */
+}
+
+.cart-button {
+    background-color: #34a853; /* cor do botão do carrinho */
+    border: none; /* remove borda do botão */
+    cursor: pointer; /* cursor pointer para o botão */
+}
+
+.cart-button:hover {
+    background-color: #2c8c43; /* cor do botão ao passar o mouse */
+}
+
+/* Fundo animado */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #74c0fc, #a5d8ff); /* gradiente de fundo */
+    background-size: 400% 400%; /* tamanho do fundo */
+    animation: gradient-animation 15s ease infinite; /* animação do fundo */
+    z-index: -1; /* fundo atrás dos outros elementos */
+}
+
+/* Fundo animado com GIF */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../Imagens/back4.webp') center center / cover no-repeat;
+    z-index: -1; /* Certifique-se de que o fundo fique atrás dos outros elementos */
+    opacity: 0.7; /* Ajuste a opacidade conforme necessário para suavizar o GIF */
+}
+
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; } /* posição inicial */
+    50% { background-position: 100% 50%; } /* posição no meio */
+    100% { background-position: 0% 50%; } /* posição final */
+}
+
+/* Estilos do carrinho de compras */
+.cart-modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 300px;
+    z-index: 20;
+}
+
+.cart-modal h2 {
+    font-size: 1.2em;
+    color: #2a7aba;
+    margin-bottom: 10px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cart-items img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.close-cart {
+    background-color: #2a7aba;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.close-cart:hover {
+    background-color: #1e5f91;
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00c6ff;
+}

@@ -1,0 +1,201 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../../Imagens/back6.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding-top: 80px; /* Espaço para o menu fixo */
+}
+
+/* Menu de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0072ff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    margin: 0 20px;
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+.contact-btn a {
+    padding: 12px 25px;
+    background-color: #0072ff;
+    color: #fff;
+    border: 2px solid #0072ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-btn a:hover {
+    background-color: #00c6ff;
+    color: #fff;
+}
+
+/* Seção de Serviços */
+.services {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #00bfff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Cartões de serviço */
+.service-card {
+    background-color: #111;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.service-card p {
+    font-size: 1.4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    color: #00bfff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-card ul li {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-size: 1.3rem;
+    color: #bbb;
+    margin-top: 30px;
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 4px solid #00bfff;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-btn {
+        margin-top: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card h2 {
+        font-size: 2rem;
+    }
+
+    .service-card p, .service-card ul li {
+        font-size: 1.2rem;
+    }
+
+    .service-card img {
+        max-width: 100%;
+    }
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00c6ff;
+}

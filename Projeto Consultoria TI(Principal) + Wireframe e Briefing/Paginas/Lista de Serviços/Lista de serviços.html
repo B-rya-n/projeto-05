@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria de TI</title>
+    <link rel="stylesheet" href="LS.css">
+</head>
+<body>
+    <!-- Cabeçalho com título e carrinho de compras -->
+    <header class="navbar"> 
+        <div class="logo">
+            <a href="../../index.html">Tec New</a>
+        </div>
+        
+        <nav class="menu">
+            <a href="../../index.html">Home</a>
+            <a href="../Serviços/serviços.html">Serviços</a>
+            <a href="../Sobre/Sobre.html">Sobre</a>
+            <a href="../Recursos/Recursos.html">Recursos</a>
+            <a href="../Contatos/Contatos.html">Contato</a>
+        </nav>
+        
+        <div class="cart">
+            <span>Carrinho:</span> <span id="cart-count">0</span> itens
+        </div>
+    </header>
+    
+
+    <!-- Fundo animado -->
+    <div class="background-animation"></div>
+
+    <!-- Seção de serviços -->
+    <main class="container">
+        <h2>Nossos Serviços</h2>
+        <ul class="service-list">
+            <!-- Serviços (10 no total) -->
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 1.jpg" alt="Segurança da Informação">
+                <h3>Consultoria em Segurança da Informação</h3>
+                <p>Proteja seus dados com análises completas de segurança.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 6.jpg" alt="Gerenciamento de Projetos de TI">
+                <h3>Gerenciamento de Projetos de TI</h3>
+                <p>Planejamento e execução de projetos com foco em resultados.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 7.jpg" alt="Infraestrutura de Redes">
+                <h3>Infraestrutura de Redes</h3>
+                <p>Configuração de redes corporativas seguras e estáveis.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem nuvem.jpg" alt="Consultoria em Cloud Computing">
+                <h3>Consultoria em Cloud Computing</h3>
+                <p>Adote soluções em nuvem para escalabilidade e economia.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 2.jpg" alt="Desenvolvimento de Aplicações">
+                <h3>Desenvolvimento de Aplicações</h3>
+                <p>Criação de aplicativos personalizados para o seu negócio.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 3.jpg" alt="Consultoria em Transformação Digital">
+                <h3>Consultoria em Transformação Digital</h3>
+                <p>Aumente a competitividade com transformação digital.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 5.jpg" alt="Backup e Recuperação de Dados">
+                <h3>Backup e Recuperação de Dados</h3>
+                <p>Proteja dados críticos com backup seguro e confiável.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem grafico.jpg" alt="Consultoria em DevOps">
+                <h3>Consultoria em DevOps</h3>
+                <p>Automatize processos com uma abordagem DevOps.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 4.jpg" alt="Monitoramento de Sistemas">
+                <h3>Monitoramento de Sistemas</h3>
+                <p>Monitore sistemas e identifique problemas proativamente.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+            <li class="service-item">
+                <img src="../../Imagens/ti imagem 8.avif" alt="Consultoria em Compliance e Regulamentação">
+                <h3>Consultoria em Compliance e Regulamentação</h3>
+                <p>Conformidade com regulamentações e boas práticas.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Solicitar Orçamento</a>
+                    <a href="../Introduçâo serviços/Introduçao.html" class="button">Mais Informações</a>
+                    <button class="cart-button" onclick="addToCart()">Adicionar ao Carrinho</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <script src="java.js"></script>
+
+<!-- Carrinho de compras interativo -->
+<div id="cart-modal" class="cart-modal">
+    <h2>Itens no Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="closeCart()" class="close-cart">Fechar Carrinho</button>
+</div>
+
+<script src="java.js"></script>
+
+
+<!-- Rodapé -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>© 2024 Tec New. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
