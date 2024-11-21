@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH Connect</title>
+    <style>
+        /* Configurações gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Fundo claro */
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #2c3e50; /* Azul escuro */
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('imagens/background.webp');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-cta {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .btn-cta:hover {
+            background-color: #2980b9;
+        }
+
+        /* Seções */
+        section {
+            padding: 60px 5%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Serviços */
+        .servicos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .servico-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .servico-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .servico-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            background: #f8f9fa;
+        }
+
+        .depoimentos-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .depoimento-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .depoimento-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .depoimento-item p {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Benefícios */
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .beneficio-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .beneficio-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        /* Contato */
+        .contato form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contato input, .contato textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .contato textarea {
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #2980b9;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <img src="imagens/logo_50x60.png" alt="Logo RH Connect">
+            <h1>RH Connect</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="serviço.html">Serviços</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="Contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Simplificamos a Gestão de Pessoas</h2>
+        <p>Oferecemos soluções completas de RH para sua empresa crescer.</p>
+        <a href="#servicos" class="btn-cta">Nossos Serviços</a>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <h2>O que fazemos</h2>
+        <p>Confira como podemos ajudar sua empresa.</p>
+        <div class="servicos">
+            <div class="servico-item">
+                <h3>Recrutamento</h3>
+                <p>Encontre os melhores talentos para sua empresa.</p>
+            </div>
+            <div class="servico-item">
+                <h3>Treinamento</h3>
+                <p>Capacite sua equipe para alcançar o máximo potencial.</p>
+            </div>
+            <div class="servico-item">
+                <h3>Consultoria</h3>
+                <p>Estratégias personalizadas para gestão de pessoas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <h2>Depoimentos</h2>
+        <p>O que nossos clientes dizem:</p>
+        <div class="depoimentos-list">
+            <div class="depoimento-item">
+                <img src="imagens/pessoa 2.jfif" alt="Cliente">
+                <p>"A RH Connect transformou nossa gestão de pessoas!"</p>
+            </div>
+            <div class="depoimento-item">
+                <img src="imagens/pessoa 3.webp" alt="Cliente">
+                <p>"Soluções práticas e eficientes. Recomendo!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em contato</h2>
+        <p>Fale com nossos especialistas.</p>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea rows="4" placeholder="Mensagem"></textarea>
+            <button class="btn-enviar">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 RH Connect. Todos os direitos reservados. <a href="#">Política de Privacidade</a></p>
+    </footer>
+</body>
+</html>

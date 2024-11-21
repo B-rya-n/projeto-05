@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - RH Connect</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Fundo claro */
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px 5%;
+            color: #fff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Seção Serviços */
+        section {
+            padding: 60px 5%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .servicos-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .servico-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .servico-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .servico-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .servico-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .servico-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn-saiba-mais {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-saiba-mais:hover {
+            background-color: #2980b9;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 1024px) {
+            .servicos-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .servicos-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+/* Rodapé */
+.footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="imagens/logo_50x60.png" alt="Logo RH Connect">
+            <h1>RH Connect</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="serviço.html">Serviços</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="Contato.html">Contato</a>
+        </nav>
+    </header>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Nossos Serviços</h1>
+        <p>Descubra como podemos ajudar sua empresa a crescer com estratégias eficazes de gestão de pessoas.</p>
+    </header>
+
+    <!-- Seção de Serviços -->
+    <section>
+        <h2>O que oferecemos</h2>
+        <p>Soluções completas e personalizadas para todas as necessidades do seu RH.</p>
+        <div class="servicos-container">
+            <div class="servico-item">
+                <img src="imagens/recrutamento.webp" alt="Ícone Recrutamento">
+                <h3>Recrutamento e Seleção</h3>
+                <p>Encontre os melhores talentos para compor sua equipe com processos ágeis e precisos.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="servico-item">
+                <img src="imagens/treinamento.jfif" alt="Ícone Treinamento">
+                <h3>Treinamento e Desenvolvimento</h3>
+                <p>Capacite seus colaboradores com programas personalizados de aprendizado contínuo.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="servico-item">
+                <img src="imagens/consultoria.jfif" alt="Ícone Consultoria">
+                <h3>Consultoria em RH</h3>
+                <p>Transforme sua gestão de pessoas com análises estratégicas e orientações especializadas.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="servico-item">
+                <img src="imagens/benficios.jpeg" alt="Ícone Benefícios">
+                <h3>Gestão de Benefícios</h3>
+                <p>Administre benefícios com eficiência, proporcionando maior satisfação aos colaboradores.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="servico-item">
+                <img src="imagens/avaliação.png" alt="Ícone Avaliação">
+                <h3>Avaliação de Desempenho</h3>
+                <p>Monitore e melhore o desempenho da sua equipe com ferramentas eficazes.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="servico-item">
+                <img src="imagens/inclusao.jfif" alt="Ícone Diversidade">
+                <h3>Inclusão e Diversidade</h3>
+                <p>Promova um ambiente de trabalho diverso e inclusivo com nossas iniciativas de RH.</p>
+                <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <p>&copy; 2024 RH Connect. Todos os direitos reservados. <a href="#">Política de Privacidade</a></p>
+</footer>
+</body>
+</html>
+
